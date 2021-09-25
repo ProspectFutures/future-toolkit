@@ -20,7 +20,7 @@ const blink = keyframes`
 
 const StyledLink = styled(Link)`
   display: flex;
-  align-items: center;
+  align-items: baseline;
   .mobile-icon {
     width: 32px;
     ${({ theme }) => theme.mediaQueries.nav} {
@@ -52,20 +52,24 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <LogoIcon className="mobile-icon" />
-      <LogoWithText className="desktop-icon" isDark={isDark} />
+      <div style={{ marginRight: "5px", marginTop: "auto", marginBottom: "auto" }}>
+        <LogoIcon />
+      </div>
+      <div style={{ marginTop: "auto", marginBottom: "auto" }}>
+        <LogoWithText className="desktop-icon" isDark={isDark} />
+      </div>
     </>
   );
 
   return (
     <Flex>
-      <MenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px">
+      {/* <MenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px">
         {isPushed ? (
           <HamburgerCloseIcon width="24px" color="textSubtle" />
         ) : (
           <HamburgerIcon width="24px" color="textSubtle" />
         )}
-      </MenuButton>
+      </MenuButton> */}
       {isAbsoluteUrl ? (
         <StyledLink as="a" href={href} aria-label="Pancake home page">
           {innerLogo}
