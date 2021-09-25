@@ -1,5 +1,5 @@
 {
-  "name": "pancake-toolkit",
+  "name": "future-toolkit",
   "version": "1.0.0",
   "description": "Pancake frontend packages",
   "private": true,
@@ -8,13 +8,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pancakeswap/pancake-toolkit.git"
+    "url": "git+https://github.com/ProspectFutures/future-toolkit.git"
   },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pancakeswap/pancake-toolkit/issues"
-  },
-  "homepage": "https://github.com/pancakeswap/pancake-toolkit#readme",
   "scripts": {
     "build": "lerna run build",
     "test": "lerna run test",
